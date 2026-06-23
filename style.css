@@ -1,0 +1,196 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#081c15;
+color:white;
+min-height:100vh;
+overflow-x:hidden;
+transition:0.4s;
+}
+
+body.light{
+background:#f4f4f4;
+color:#222;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+backdrop-filter:blur(10px);
+}
+
+.controls{
+display:flex;
+gap:10px;
+}
+
+#search{
+padding:10px;
+border:none;
+border-radius:10px;
+outline:none;
+}
+
+#themeBtn{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.filter-buttons{
+text-align:center;
+margin:20px;
+}
+
+.filter-buttons button{
+padding:10px 20px;
+margin:5px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+background:#2d6a4f;
+color:white;
+}
+
+.filter-buttons .active{
+background:#52b788;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+overflow:hidden;
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+cursor:pointer;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.content{
+padding:15px;
+}
+
+.actions{
+display:flex;
+justify-content:space-between;
+margin-top:10px;
+font-size:22px;
+}
+
+.actions i{
+cursor:pointer;
+}
+
+.favorite.active{
+color:red;
+}
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:40px;
+font-size:40px;
+cursor:pointer;
+color:white;
+}
+
+/* Animated Flowers */
+
+.flowers span{
+position:fixed;
+width:50px;
+height:50px;
+background:url('https://cdn-icons-png.flaticon.com/512/766/766012.png')
+center/cover;
+animation:float 15s linear infinite;
+opacity:0.3;
+}
+
+.flowers span:nth-child(1){
+left:10%;
+animation-duration:12s;
+}
+
+.flowers span:nth-child(2){
+left:30%;
+animation-duration:18s;
+}
+
+.flowers span:nth-child(3){
+left:50%;
+animation-duration:10s;
+}
+
+.flowers span:nth-child(4){
+left:70%;
+animation-duration:15s;
+}
+
+.flowers span:nth-child(5){
+left:90%;
+animation-duration:20s;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) rotate(0deg);
+}
+100%{
+transform:translateY(-100vh) rotate(360deg);
+}
+}
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+gap:15px;
+}
+}
