@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="flowers">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<header>
+    <h1><i class="fa-solid fa-image"></i> Nature Gallery</h1>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search images...">
+
+        <button id="themeBtn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+</header>
+
+<div class="filter-buttons">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="flowers">Flowers</button>
+    <button data-filter="nature">Nature</button>
+    <button data-filter="mountains">Mountains</button>
+</div>
+
+<section class="gallery">
+
+    <div class="card flowers">
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946" alt="Rose">
+        <div class="content">
+            <h3>Rose Garden</h3>
+            <div class="actions">
+                <i class="fa-regular fa-heart favorite"></i>
+                <a href="https://images.unsplash.com/photo-1490750967868-88aa4486c946" download>
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Forest">
+        <div class="content">
+            <h3>Forest View</h3>
+            <div class="actions">
+                <i class="fa-regular fa-heart favorite"></i>
+                <a href="https://images.unsplash.com/photo-1506744038136-46273834b3fb" download>
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mountains">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Mountain">
+        <div class="content">
+            <h3>Mountain Peak</h3>
+            <div class="actions">
+                <i class="fa-regular fa-heart favorite"></i>
+                <a href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" download>
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card flowers">
+        <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d" alt="Flower">
+        <div class="content">
+            <h3>Cherry Blossom</h3>
+            <div class="actions">
+                <i class="fa-regular fa-heart favorite"></i>
+                <a href="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d" download>
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
